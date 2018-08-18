@@ -1,0 +1,25 @@
+{
+    "name": "hatenablog",
+    "version": "1.0.0",
+    "description": "a collection of markdown files for kiririmode.hatenablog.jp",
+    "main": "index.js",
+    "scripts": {
+        "lint": "textlint -f pretty-error"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kiririmode/hatenablog.git"
+    },
+    "author": "kiririmode <kiririmode@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kiririmode/hatenablog/issues"
+    },
+    "homepage": "https://github.com/kiririmode/hatenablog#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "textlint": "^11.0.0",
+        "textlint-rule-preset-japanese": "^4.0.0",
+        "textlint-rule-preset-jtf-style": "^2.3.1"
+    }
+}
