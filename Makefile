@@ -24,7 +24,7 @@ search-draft:
 
 lint:
 	find entry -newer blogged-time -name \*.md -print0 \
-	| xargs --no-run-if-empty -0 grep -L ignore-lint  \
+	| xargs --no-run-if-empty -0 egrep -L '<!--[[:space:]]*ignore-lint[[:space:]]*-->'  \
 	| xargs --no-run-if-empty npm run lint
 
 release: lint
