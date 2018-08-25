@@ -32,4 +32,10 @@ release: lint
 	| xargs --no-run-if-empty -0 -L 1 blogsync push
 	touch -t $(shell date +%Y%m%d%H%M.%S) blogged-time
 
-.PHONY: init sync lint release search-draft .draft
+
+remove-draft:
+	find entry -name \*.md \
+	| xargs egrep '^Draft:[[:space:]]*true' -l \
+	| xargs rm
+
+.PHONY: init sync lint release search-draft remove-draft
